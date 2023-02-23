@@ -28,14 +28,14 @@ import lombok.Setter;
 @AllArgsConstructor
 public class MedicalStaff {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue
 	private long staffId;
 	@NotEmpty
 	@NotBlank
-	private String staff_Name;
+	private String staffName;
 	@NotEmpty
 	@NotBlank
-	private String associated_with;
+	private String associatedWith;
 	@Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}",message ="Invalid Email")
 	private String emailId;
 	//@Pattern(regexp = "([A-Za-z]+[1-9]+)",message = "Invald Password")
@@ -44,7 +44,7 @@ public class MedicalStaff {
 	@NotEmpty
 	private String location;
 	@Size(min =10, message = "Enter Valid Mobile Number")
-	private String mobile_no;
+	private String mobileNo;
 	
 	@OneToMany(mappedBy = "staff",cascade = CascadeType.ALL)
 	@JsonIgnore

@@ -30,11 +30,11 @@ public class EmployeesServiceTest {
 		
 		Employeess emps=new Employeess();
 		emps.setEmpId(1);
-		emps.setEmp_name("sadeesh");
+		emps.setEmpName("sadeesh");
 		emps.setBirthdate(LocalDate.of(2002,10,1));
 		emps.setEmailId("emp@gmail.com");
 		emps.setPassword("sadee");
-		emps.setMobile_no("9876543210");
+		emps.setMobileNo("9876543210");
 		
 		when(empd.existsById(emps.getEmpId())).thenReturn(true);
     	Mockito.doNothing().when(empd).deleteById(emps.getEmpId());

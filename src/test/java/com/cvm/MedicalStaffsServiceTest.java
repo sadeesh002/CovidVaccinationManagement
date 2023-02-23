@@ -26,15 +26,15 @@ public class MedicalStaffsServiceTest {
 	public void insertVitalsTest() {
 		
 		VitalsAtVaccination vital=new VitalsAtVaccination();
-		vital.setVital_id(1);
+		vital.setVitalId(1);
 		vital.setTemperature(98.5f);
-		vital.setBlood_pressure(89);
+		vital.setBloodPressure(89);
 		vital.setSaturation(128);
-		vital.setVital_time("10am");
+		vital.setVitalTime("10am");
 		
 		when(vav.save(vital)).thenReturn(vital);
 		String result = msService.insertVitals(vital);
-		assertEquals("Added Successfully with vitalId:" +vital.getVital_id(), result);
+		assertEquals("Added Successfully with vitalId:" +vital.getVitalId(), result);
 	}
 	
 	@Mock

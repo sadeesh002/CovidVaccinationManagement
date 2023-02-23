@@ -32,12 +32,12 @@ public class RegisterUserServiceTest {
 	{
 		MedicalStaff mStaff=new MedicalStaff();
 		mStaff.setStaffId(1);
-		mStaff.setStaff_Name("sadees");
-		mStaff.setAssociated_with("abc");
+		mStaff.setStaffName("sadees");
+		mStaff.setAssociatedWith("abc");
 		mStaff.setEmailId("abc1@gmail.com");
 		mStaff.setPassword("sdfah5");
 		mStaff.setLocation("chennai");
-		mStaff.setMobile_no("837377409");
+		mStaff.setMobileNo("837377409");
 		
 		when(mdd.save(mStaff)).thenReturn(mStaff);
 		String result = rss.insertMedicalStaff(mStaff);
@@ -69,11 +69,11 @@ public class RegisterUserServiceTest {
 		
 		Employeess emp=new Employeess();
 		emp.setEmpId(1);
-		emp.setEmp_name("sadeesh");
+		emp.setEmpName("sadeesh");
 		emp.setBirthdate(LocalDate.of(2002,10,1));
 		emp.setEmailId("emp@gmail.com");
 		emp.setPassword("sadee");
-		emp.setMobile_no("9876543210");
+		emp.setMobileNo("9876543210");
 		
 		when(esd.save(emp)).thenReturn(emp);
 		String result=rss.insertEmployee(emp);

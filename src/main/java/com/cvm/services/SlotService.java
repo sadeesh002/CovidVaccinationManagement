@@ -49,9 +49,9 @@ public class SlotService {
 	}
 
 	public String updateSlot(long slotId, Slot slots) throws SlotIdNotFoundException  {
-		if (slotId == slots.getSlot_id()) {
+		if (slotId == slots.getSlotId()) {
 			Slot upSlot = sd.save(slots);
-			return "Updated Successfully for SlotId:" + upSlot.getSlot_id();
+			return "Updated Successfully for SlotId:" + upSlot.getSlotId();
 		}
 
 		throw new SlotIdNotFoundException("Slot Not Found For slotId:" + slotId);

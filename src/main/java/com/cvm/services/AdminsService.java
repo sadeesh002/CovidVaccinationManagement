@@ -19,7 +19,7 @@ public class AdminsService {
 	
 	public String insertSlot(Slot slots) {
 		Slot dbSlot = sd.save(slots);
-		return "Added Successfully with SlotId:" +dbSlot.getSlot_id();
+		return "Added Successfully with SlotId:" +dbSlot.getSlotId();
 	}
 	
 	public List<Slot> findAll() throws NoSlotsFoundException  {

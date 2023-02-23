@@ -42,9 +42,9 @@ public class VitalsAtVaccinationService {
 //	}
 
 	public String updateVital(long vitalId, VitalsAtVaccination vitals) throws VitalIdNotFoundException {
-		if (vitalId == vitals.getVital_id()) {
+		if (vitalId == vitals.getVitalId()) {
 			VitalsAtVaccination upVital = vd.save(vitals);
-			return "Updated Successfully for vitalId:" + upVital.getVital_id();
+			return "Updated Successfully for vitalId:" + upVital.getVitalId();
 		}
 
 		throw new VitalIdNotFoundException("Vital Not Found For vitalId:" + vitalId);

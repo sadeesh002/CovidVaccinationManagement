@@ -35,8 +35,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Slot {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-	private long slot_id;
+    @GeneratedValue
+	private long slotId;
     @DateTimeFormat
 	private LocalDate date;
     @NotNull
@@ -46,10 +46,10 @@ public class Slot {
     private int doseNo;
     @Min(value =10)
     @Max(value = 100)
-	private int current_availabe_slot;
+	private int currentAvailabeSlot;
     @Min(value =0)
     @Max(value = 100)
-	private int balance_availabe_slot;
+	private int balanceAvailabeSlot;
 	
 	
 	

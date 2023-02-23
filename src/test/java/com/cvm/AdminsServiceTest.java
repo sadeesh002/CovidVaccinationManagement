@@ -32,26 +32,26 @@ public class AdminsServiceTest {
 	public void insertSlotTest() {
 		
 		Slot slot=new Slot();
-		slot.setSlot_id(1);
+		slot.setSlotId(1);
 		slot.setDate(LocalDate.of(2023, 06, 10));
 		slot.setSlotLocation("Chennai");
-		slot.setCurrent_availabe_slot(30);
-		slot.setBalance_availabe_slot(20);
+		slot.setCurrentAvailabeSlot(30);
+		slot.setBalanceAvailabeSlot(20);
 		
 		when(add.save(slot)).thenReturn(slot);
 		String result = asss.insertSlot(slot);
-		assertEquals("Added Successfully with SlotId:"+slot.getSlot_id(), result);
+		assertEquals("Added Successfully with SlotId:"+slot.getSlotId(), result);
 	}
 	
 	@Test
 	public void findAllTest() throws NoSlotsFoundException {
 		
 		Slot slot=new Slot();
-		slot.setSlot_id(1);
+		slot.setSlotId(1);
 		slot.setDate(LocalDate.of(2023, 06, 10));
 		slot.setSlotLocation("Chennai");
-		slot.setCurrent_availabe_slot(30);
-		slot.setBalance_availabe_slot(20);
+		slot.setCurrentAvailabeSlot(30);
+		slot.setBalanceAvailabeSlot(20);
 		
 		List<Slot> list=new ArrayList<>();
 		list.add(slot);

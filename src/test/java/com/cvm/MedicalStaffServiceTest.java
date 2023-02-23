@@ -32,12 +32,12 @@ public class MedicalStaffServiceTest {
 		
 		MedicalStaff mStaff=new MedicalStaff();
 		mStaff.setStaffId(1);
-		mStaff.setStaff_Name("sadees");
-		mStaff.setAssociated_with("abc");
+		mStaff.setStaffName("sadees");
+		mStaff.setAssociatedWith("abc");
 		mStaff.setEmailId("abc1@gmail.com");
 		mStaff.setPassword("sdfah5");
 		mStaff.setLocation("chennai");
-		mStaff.setMobile_no("83737740");
+		mStaff.setMobileNo("83737740");
 		
 		Optional<MedicalStaff> opm=Optional.of(mStaff);
 		
@@ -45,12 +45,12 @@ public class MedicalStaffServiceTest {
 		
 		MedicalStaff mso=mss.findByMedicalStaffId(1);
 		
-		assertEquals("sadees", mso.getStaff_Name());
-		assertEquals("abc", mso.getAssociated_with());
+		assertEquals("sadees", mso.getStaffName());
+		assertEquals("abc", mso.getAssociatedWith());
 		assertEquals("abc1@gmail.com", mso.getEmailId());
 		assertEquals("sdfah5", mso.getPassword());
 		assertEquals("chennai", mso.getLocation());
-		assertEquals("83737740", mso.getMobile_no());
+		assertEquals("83737740", mso.getMobileNo());
 		
 	}
 
@@ -75,12 +75,12 @@ public class MedicalStaffServiceTest {
     public void deleteByIdTest() throws MedicalStaffIdNotFoundException {
 		MedicalStaff mStaff=new MedicalStaff();
 		mStaff.setStaffId(1);
-		mStaff.setStaff_Name("sadees");
-		mStaff.setAssociated_with("abc");
+		mStaff.setStaffName("sadees");
+		mStaff.setAssociatedWith("abc");
 		mStaff.setEmailId("abc1@gmail.com");
 		mStaff.setPassword("sdfah5");
 		mStaff.setLocation("chennai");
-		mStaff.setMobile_no("83737740");
+		mStaff.setMobileNo("83737740");
     	String msg= "Deleted Successfully for StaffId:" + mStaff.getStaffId();
     	when(msd.existsById(mStaff.getStaffId())).thenReturn(true);
     	Mockito.doNothing().when(msd).deleteById(mStaff.getStaffId());
@@ -90,12 +90,12 @@ public class MedicalStaffServiceTest {
 	public void updateMedicalStaffTest() throws MedicalStaffIdNotFoundException {
 		MedicalStaff mStaff=new MedicalStaff();
 		mStaff.setStaffId(1);
-		mStaff.setStaff_Name("sadees");
-		mStaff.setAssociated_with("abc");
+		mStaff.setStaffName("sadees");
+		mStaff.setAssociatedWith("abc");
 		mStaff.setEmailId("abc1@gmail.com");
 		mStaff.setPassword("sdfah5");
 		mStaff.setLocation("chennai");
-		mStaff.setMobile_no("83737740");
+		mStaff.setMobileNo("83737740");
 		
 		when(msd.existsById(mStaff.getStaffId())).thenReturn(true);
 		when(msd.save(mStaff)).thenReturn(mStaff);
@@ -108,12 +108,12 @@ public class MedicalStaffServiceTest {
 	public void findAllTest() throws NoMedicalStaffFoundException  {
 		MedicalStaff mStaff=new MedicalStaff();
 		mStaff.setStaffId(1);
-		mStaff.setStaff_Name("sadees");
-		mStaff.setAssociated_with("abc");
+		mStaff.setStaffName("sadees");
+		mStaff.setAssociatedWith("abc");
 		mStaff.setEmailId("abc1@gmail.com");
 		mStaff.setPassword("sdfah5");
 		mStaff.setLocation("chennai");
-		mStaff.setMobile_no("83737740");
+		mStaff.setMobileNo("83737740");
 		List<MedicalStaff> list=new ArrayList<>();
 		list.add(mStaff);
 		when(msd.findAll()).thenReturn(list);

@@ -24,8 +24,8 @@ import lombok.Setter;
 @Setter
 public class VitalsAtVaccination {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long vital_id;
+	@GeneratedValue
+	private long vitalId;
 	@Min(value = 97)
 	@Max(value = 105)
 	private float temperature;
@@ -34,8 +34,8 @@ public class VitalsAtVaccination {
 	private float saturation;
 	@Min(value = 90)
 	@Max(value = 180)
-	private float blood_pressure;
-	private String vital_time;
+	private float bloodPressure;
+	private String vitalTime;
 	
 	@ManyToOne
 	private MedicalStaff staff;

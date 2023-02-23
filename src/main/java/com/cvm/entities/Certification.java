@@ -1,6 +1,7 @@
 package com.cvm.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -12,6 +13,7 @@ import lombok.Setter;
 @Setter
 public class Certification {
 	@Id
+	@GeneratedValue
 	private long certificateId;
 	
 	@ManyToOne

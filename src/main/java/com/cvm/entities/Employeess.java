@@ -36,19 +36,19 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Employeess {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue
 	private long empId;
 	@NotEmpty
 	@NotBlank
-	private String emp_name;
-	//@Pattern(regexp = "([A-Za-z]+[1-9]+)",message = "Invald Password")
+	private String empName;
+	
 	@Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}",message ="Invalid Email")
 	private String emailId;
 	private String password;
 	@DateTimeFormat
 	private LocalDate birthdate;
 	@Size(min = 10,message = "Enter valid Mobile Number")
-	private String mobile_no;
+	private String mobileNo;
 	
 	
 	@ManyToMany

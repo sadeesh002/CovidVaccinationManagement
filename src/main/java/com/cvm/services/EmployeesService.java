@@ -46,7 +46,7 @@ public class EmployeesService {
 	public List<VitalsAtVaccination> findByVitalsEmpId(long empId) throws VitalIdNotFoundException  {
 		 List<VitalsAtVaccination> op = vdd.findByempId(empId);
 		if (op.isEmpty()) {
-			//return ResponseEntity.notFound().build
+			
 			throw new VitalIdNotFoundException("Vital Not Found For employeeId:" + empId);
 		} else {
 			return op;

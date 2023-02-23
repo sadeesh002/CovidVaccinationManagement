@@ -16,7 +16,7 @@ public class MedicalStaffsService {
 	
 	public String insertVitals(VitalsAtVaccination vitals) {
 		VitalsAtVaccination dbVital = vdd.save(vitals);
-		return "Added Successfully with vitalId:" + dbVital.getVital_id();
+		return "Added Successfully with vitalId:" + dbVital.getVitalId();
 	}
 	
 	@Autowired
