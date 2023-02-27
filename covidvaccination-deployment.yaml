@@ -18,6 +18,6 @@ spec:
 
       containers:
       - name: covidvaccination #container name
-        image: 'sadeeshm002/covidvaccination:v1' #image name
+        image: 'sadeeshm002/covid:v1' #image name
         ports:
         - containerPort: 8085 # demo runs on port 8085
